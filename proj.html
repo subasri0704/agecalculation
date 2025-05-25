@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculation</title>
+    <style>
+        .container {
+            text-align: center;
+
+        }
+        body{
+
+            background-color: goldenrod;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Age Calculation</h1>
+        <label for="dob">Enter your Birth year:</label>
+        <input type="number" id="dob"><br><br>
+        <p id="result"></p><br><br>
+        <button onclick="age()">calculate age</button>
+        
+    </div>
+    <script>
+    function age() {
+            const dob = parseInt(document.getElementById("dob").value);
+            const currentyear = new Date().getFullYear();
+            if (isNaN(dob) || dob > currentyear) {
+                alert("enter your correct year");
+            }
+            else {
+                var result=currentyear-dob
+            }
+
+
+console.log(result)
+result=document.getElementById("result").innerText=`your age is ${result}`;
+
+
+        }</script>
+</body>
+
+</html>
